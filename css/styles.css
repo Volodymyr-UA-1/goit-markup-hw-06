@@ -311,8 +311,6 @@ button{
     position: relative;
     color: #4d5ae5;
 }
-
-
 .mobile-list-social{
     display: flex;
     justify-content: space-between;
@@ -358,7 +356,7 @@ button{
 .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/hero-1-min.jpg");
     max-width: 320px;
-    margin: 0px auto;
+    margin: 0 auto;
     padding: 72px 0px;
     background-repeat: no-repeat;
     background-position: center;
@@ -410,7 +408,7 @@ button{
 .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/hero-tab-1-min.jpg");
     max-width: 767px;
-    margin: 0px auto;
+    margin: 0 auto;
     padding: 112px 0px;
 }
  .hero-title {
@@ -428,15 +426,15 @@ button{
 }
  @media (min-resolution: 2x) {
 .hero {
-     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/hero-desk-1-min.jpg");
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../image/hero/hero-tab-1@2x-min.jpg");
 }}
 
 /*hero desktop*/
 @media screen and (min-width: 1158px) {
 .hero {
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/hero-tab-1-min.jpg");
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/hero-desk-1-min.jpg");
     max-width: 1440px;
-     margin: 0px auto;
+    margin: 0 auto;
     padding: 188px 0px;
     background-repeat: no-repeat;
     background-position: center;
@@ -445,13 +443,13 @@ button{
 .hero-title {
     font-size: 56px;
     line-height: 1.07;
-    margin: 0px auto;
+    margin: 0 auto;
     max-width: 600px;
     padding-bottom: 48px;
  }
 .hero-button {
-     line-height: 1.5;
-    margin: 0px auto;
+    line-height: 1.5;
+    margin: 0 auto;
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -463,5 +461,82 @@ button{
 }
 }
 
-
+/*benefits mobile*/
+@media screen and (max-width: 1157px) {
+    .icon-benefits {
+        display: none;
+    }
+}
+.benefits-list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 72px;
+    width: 100%;
+    margin: 96px auto;
+}
+.benefits-item-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.benefits-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
+/*benefits tablet*/
+@media screen and (min-width: 768px) {
+.benefits-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px; 
+}
+.benefits-item {
+    flex-basis: calc((100% - 72px) / 2);
+}
+.benefits-item-title {
+    width: 356px;
+    text-align: left;
+}
+}
+/*benefits desctop*/
+@media screen and (min-width: 1158px) {
+    .benefits-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 120px auto;   
+        }
     
+        .benefits-item {
+            max-width: calc((100% - 3*24px) / 4);
+        }
+        .icon-benefits {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 8px;
+            height: 112px;
+            padding-top: 24px;
+            padding-bottom: 24px;
+            background-color: rgba(244, 244, 253, 1);
+            border-radius: 4px;
+            border: 1px solid rgba(142, 143, 153, 1)
+        }
+        .benefits-item-title {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 1.2;
+        }
+        .benefits-text {
+            font-weight: 400;
+        }
+    }
