@@ -1,28 +1,28 @@
-body{
+/*body{
 color: #434455;
 background-color: #fff;
 font-family: "Roboto",sans-serif;
-}
+}*/
 
 /*rezet*/
-ul, ol{
+/*ul, ol{
 list-style-type: none;
 margin: 0px;
 padding: 0px;
 
-}
-a{
+}*/
+/*a{
     text-decoration: none;
 }
 h1 ,h2 ,h3 ,h4 ,h5 ,h6 ,p{
     margin: 0;
-}
+}*/
   /*common */
-.container{
+/*.container{
     max-width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
-}
+}*/
 
 /*header
 .page-header{
@@ -259,16 +259,12 @@ img{
     display: flex;
     justify-content: center;
     gap: 24px;
-    
     margin: 0 auto;
 }
 .team-item-social {
     position: relative;
     width: 40px;
-    height: 40px;
-    
-    
-    
+    height: 40px; 
 }
 .team-icon-link:hover,
 .team-icon-link:focus{
@@ -286,7 +282,6 @@ img{
     background-color:#4d5ae5;
     cursor: pointer;
     border-radius: 50%;
-    
 }
 .icon{
     fill: #F4F4FD;
