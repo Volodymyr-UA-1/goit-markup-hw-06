@@ -513,7 +513,7 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 120px auto;   
+    margin: 240px auto;   
 }
     
 .benefits-item {
@@ -542,7 +542,6 @@ button{
 }
 
     /*team mobile*/
-
 .team-container {
     display: flex;
     flex-direction: column;
@@ -550,12 +549,13 @@ button{
     padding: 0 28px;
 }
 .team {
-    
     background-color: #f4f4fd;
 }
 .team-list {
     display: flex;
+    justify-content: center;
     flex-direction: column;
+    margin-bottom: 72px;
     gap: 72px;
 }
 .team-title {
@@ -572,12 +572,12 @@ button{
 }
  .team-images-title {
     font-weight: 500;
-     font-size: 20px;
+    font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
-     margin-bottom: 8px;
+    margin-bottom: 8px;
 }
     
 .team-text {
@@ -589,54 +589,80 @@ button{
     color: #434455;
     margin-bottom: 8px;
 }
+.team-item { 
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+.team-nickname {
+    text-align: center;
+    padding: 32px 16px;
+}
+.team-social {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 0 auto;
+}  
+.team-item-social {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
     
-        .team-item { 
-            max-width: 264px;
-            background-color: #fff;
-            border-radius: 0px 0px 4px 4px;
-background: #fff;
-        
-        }
-    
-        .team-nickname {
-            text-align: center;
-            padding: 32px 16px;
-            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-        }
-    
-        .team-social {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            margin: 0 auto;
-        }
-    
-        .team-item-social {
-            position: relative;
-            width: 40px;
-            height: 40px;
-        }
-    
-        .team-icon-link:hover,
-        .team-icon-link:focus {
-            background-color: #404bbf;
-            ;
-        }
-    
-        .team-icon-link {
-            display: flex;
-            align-items: center;
-            position: absolute;
-            justify-content: center;
-            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-            width: 100%;
-            height: 100%;
-            background-color: #4d5ae5;
-            cursor: pointer;
-            border-radius: 50%;
-    
-        }
-    
-        .icon {
-            fill: #F4F4FD;
-        }
+.team-icon-link:hover,
+.team-icon-link:focus {
+    background-color: #404bbf;
+}
+.team-icon-link {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.icon {
+     fill: #F4F4FD;
+}
+
+/*team tablet*/
+@media screen and (min-width: 768px) {
+.team {
+    background-color: #f4f4fd;
+}
+.team-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 64px;
+    }
+}
+/*team desktop*/
+@media screen and (min-width: 1158px) {
+.team{
+    background-color: #fff;
+    }
+.team-container {
+    max-height: 540px;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 240px;
+    fill: none;
+}
+.team-title {
+    margin-top: 0px;
+    margin-bottom: 72px;
+}
+.team-list {
+    width: 100%;
+    margin: 0px 156px;
+    flex-basis: calc((100% - 3*24px) / 4);
+    height: 540px;
+}
+}
