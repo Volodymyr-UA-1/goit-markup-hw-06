@@ -289,7 +289,7 @@ img{
 
 
 /*portfolio*/
-.portfolio-container{
+/*.portfolio-container{
     display: block;
     align-items: center; 
 }
@@ -364,7 +364,7 @@ img{
     border: 1px solid #e7e9fc;
     border-top: none;
     background-size: cover;
-}
+}*/
 
 /*footer*/
 .footer-container{
