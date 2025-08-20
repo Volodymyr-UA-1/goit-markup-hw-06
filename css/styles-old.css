@@ -367,18 +367,18 @@ img{
 }*/
 
 /*footer*/
-.footer-container{
+/*.footer-container{
     display: flex;
     align-items: baseline
 }
 .logo-block{
     margin-right: 120px;
 }
-.footer{
+/*.footer{
     background-color: #2e2f42;
     padding: 100px 0px;
-}
-.footer-logo{
+}*/
+/*.footer-logo{
     display: inline-block;
     margin-bottom: 16px;
 }
@@ -400,7 +400,7 @@ img{
 .footer-title-social{
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.17;
     color: rgba(255, 255, 255, 1);
     margin-bottom: 16px;
     letter-spacing: 0.02em;
@@ -445,7 +445,7 @@ img{
 .footer-title-subscribe{
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     color: #fff;
     margin-bottom: 16px;
     letter-spacing: 0.02em;
@@ -506,7 +506,7 @@ img{
 }
 .icon-telegram{
     margin-left: 16px;
-}
+}*/
 
 /*modal*/
 .backdrop{
