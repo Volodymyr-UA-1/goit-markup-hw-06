@@ -548,20 +548,23 @@ button{
 
     /*team mobile*/
         @media screen and (min-width: 320px) {
+            .team{
+background-color: #f4f4fd;
+            }
 .team-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 28px;
-    background-color: #f4f4fd;
     margin-bottom: 96px;
 }
 .team-list {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 96px;
     gap: 72px;
+    margin-bottom: 96px;
+    
 }
 .team-title {
     font-family: "Roboto", sans-serif;
@@ -648,18 +651,16 @@ button{
 /*team desktop*/
 @media screen and (min-width: 1158px) {
 .team-container {
-    max-height: 540px;
     width: 100%;
     padding: 0;
     margin: 120px auto;
 }
 .team-title {
-    margin-top: 0px;
     margin-bottom: 72px;
 }
 .team-list {
     width: 100%;
-    margin: 0px 156px;
+    margin-bottom: 120px;
     flex-basis: calc((100% - 3*24px) / 4);
     
 }
@@ -787,6 +788,9 @@ button{
 
 /*footer mobile*/
 @media screen and (min-width: 320px) {
+    .footer{
+background-color: #2e2f42;
+    }
 .footer-container {
     display: flex;
     max-width: 320px;
@@ -794,7 +798,7 @@ button{
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-    background-color: #2e2f42;
+    
     padding: 96px 16px;
 }
 .logo-block{
@@ -985,16 +989,13 @@ margin-bottom: 0px;
 }
 /*footer desktop*/
 @media screen and (min-width: 1158px) {
-    .footer{
-        width: 1440px;
-        margin: 0 auto; 
-    }
 .footer-container {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     column-gap: 0px;
     max-width: 100%;
+justify-content: center;
     align-items: baseline;
     padding-top: 100px; 
     padding-bottom: 100px; 
