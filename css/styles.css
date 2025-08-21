@@ -358,7 +358,7 @@ button{
  @media screen and (min-width: 320px){
 .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/hero-1-min.jpg");
-    max-width: 320px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 72px 0px;
     background-repeat: no-repeat;
@@ -410,7 +410,6 @@ button{
 @media screen and (min-width: 768px) {
 .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/hero-tab-1-min.jpg");
-    max-width: 767px;
     margin: 0 auto;
     padding: 112px 0px;
 }
@@ -436,7 +435,6 @@ button{
 @media screen and (min-width: 1158px) {
 .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/hero-desk-1-min.jpg");
-    max-width: 1440px;
     margin: 0 auto;
     padding: 188px 0px;
     background-repeat: no-repeat;
@@ -1012,4 +1010,231 @@ justify-content: center;
 .footer-social {
     margin-right: 80px;
 }
+}
+
+/*backdrop is-open*/
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.backdrop:not(.is-open) .modal {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+/*modal mobile*/
+@media screen and (min-width: 320px) {
+.modal {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 316px;
+    left: 50%;
+    padding: 72px 16px 24px 16px;
+    border-radius: 4px;
+    width: 288px;
+    height: 623px;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fcfcfc;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/*button close*/
+.button-icon-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0px;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: #2e2f42;
+}
+.button-icon-close:hover,
+.button-icon-close:focus {
+    background-color: #404bbf;
+    border: none;
+    fill: #ffffff;
+}
+.icon-close {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/*modal title*/
+.modal-title {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+    text-align: center;
+    color: #2e2f42;
+    margin-bottom: 16px;
+}
+/*form modal*/
+.form-field {
+    display: inline-block;
+    margin-bottom: 8px;
+    width: 100%;
+}
+.form-label {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    margin-bottom: 4px;
+}
+.input-wrapper {
+    position: relative;
+}
+.form-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input {
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    padding-left: 38px;
+    background-color: transparent;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+}
+.form-input:focus {
+    border-color: #4D5AE5;
+}
+.form-input:focus+svg {
+    fill: #4d5ae5;
+}
+.form-field-textarea {
+    margin-bottom: 16px;
+    width: 100%;
+}
+.form-textarea {
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 4px;
+    width: 100%;
+    min-height: 120px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    resize: none;
+    background-color: transparent;
+    outline: transparent;
+    padding: 8px 16px;
+    color: rgba(46, 47, 66, 0.4);
+}
+.form-textarea::placeholder {
+    left: 16px;
+    top: 8px;
+}
+.form-textarea:focus {
+    border-color: #4D5AE5;
+}
+/*checkbox modal*/
+.modal-checkbox {
+    margin-bottom: 24px;
+}
+input:checked+label>span {
+    background-color: #404bbf;
+    border: none;
+    fill: #F4F4FD;
+}
+.checkbox-label {
+    display: flex;
+    align-items: center;
+}
+.custom-checkbox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    fill: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-right: 8px;
+}
+.privacy{
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+/*checkbox text*/
+.privacy-link {
+    color: #4d5ae5;
+}
+.modal-button {
+    display: block;
+    font-family: "Roboto", sans-serif;
+    align-items: center;
+    border-radius: 4px;
+    border: none;
+    padding: 16px 32px;
+    min-width: 169px;
+    height: 56px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background-color: #4d5ae5;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;
+    margin: 0 auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+.modal-button:hover,
+.modal-button:focus {
+    background-color: #404bbf;
+}
+}
+
+/*modal-tablet*/
+@media screen and (min-width: 768px) {
+.modal {
+    top: 388px;
+    padding: 72px 24px 24px 24px;
+    width: 408px;
+    height: 584px;
+    } 
+}
+
+/*modal-decktop*/
+@media screen and (min-width: 1158px) {
+    .modal {
+        top: 372px;
+        
+    }
 }
