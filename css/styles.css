@@ -983,7 +983,7 @@ background-color: #f4f4fd;
 .footer-subscribe {
     display: flex;
     margin-left: 0;
-    align-items: center;
+    align-items: start;
     justify-content: center;
 }
 .footer-title-subscribe {
